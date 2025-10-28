@@ -1,18 +1,26 @@
+/* ================================
+   🏷️ Badge Styles
+================================ */
 .badge {
     display: inline-block;
-    padding: var(--space-xs) var(--space-md);
+    padding: calc(var(--space-xs) + 1px) var(--space-sm);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
     font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    user-select: none;
+    transition: var(--transition-base);
 }
 
+/* ===== Color Variants ===== */
 .badge-primary {
     background-color: var(--primary-color);
     color: var(--white);
 }
 
-.badge-danger {
-    background-color: var(--danger-color);
+.badge-secondary {
+    background-color: var(--secondary-color);
     color: var(--white);
 }
 
@@ -21,7 +29,14 @@
     color: var(--white);
 }
 
-.badge-secondary {
-    background-color: var(--secondary-color);
+.badge-danger {
+    background-color: var(--danger-color);
     color: var(--white);
+}
+
+/* ===== Optional Hover Effects (for clickable badges) ===== */
+.badge:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
 }

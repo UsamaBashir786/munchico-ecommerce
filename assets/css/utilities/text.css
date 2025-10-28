@@ -1,18 +1,59 @@
-.text-left { text-align: left; }
+/* ================================
+   📏 Text Alignment & Flex Helpers
+================================ */
+.text-left   { text-align: left; }
 .text-center { text-align: center; }
-.text-right { text-align: right; }
+.text-right  { text-align: right; }
 
-.text-primary { color: var(--primary-color); }
+.d-flex             { display: flex; }
+.d-grid             { display: grid; }
+.align-items-center { align-items: center; }
+.justify-center     { justify-content: center; }
+.justify-between    { justify-content: space-between; }
+
+/* ================================
+   🎨 Text Colors
+================================ */
+.text-primary   { color: var(--primary-color); }
 .text-secondary { color: var(--secondary-color); }
-.text-white { color: var(--white); }
-.text-muted { color: var(--gray-500); }
+.text-accent    { color: var(--accent-color); }
+.text-danger    { color: var(--danger-color); }
+.text-white     { color: var(--white); }
+.text-muted     { color: var(--gray-500); }
+.text-dark      { color: var(--gray-900); }
 
-.text-xs { font-size: var(--font-size-xs); }
-.text-sm { font-size: var(--font-size-sm); }
-.text-lg { font-size: var(--font-size-lg); }
-.text-xl { font-size: var(--font-size-xl); }
-.text-2xl { font-size: var(--font-size-2xl); }
-.text-3xl { font-size: var(--font-size-3xl); }
+/* ================================
+   🔠 Font Sizes
+================================ */
+.text-xs   { font-size: var(--font-size-xs); }
+.text-sm   { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg   { font-size: var(--font-size-lg); }
+.text-xl   { font-size: var(--font-size-xl); }
+.text-2xl  { font-size: var(--font-size-2xl); }
+.text-3xl  { font-size: var(--font-size-3xl); }
 
-.font-bold { font-weight: 700; }
-.font-semibold { font-weight: 600; }
+/* ================================
+   🧱 Font Weights & Styles
+================================ */
+.font-bold      { font-weight: 700; }
+.font-semibold  { font-weight: 600; }
+.font-medium    { font-weight: 500; }
+.font-regular   { font-weight: 400; }
+.font-light     { font-weight: 300; }
+
+.uppercase      { text-transform: uppercase; }
+.capitalize     { text-transform: capitalize; }
+.italic         { font-style: italic; }
+
+/* ================================
+   🌈 Background Utilities
+================================ */
+.bg-primary   { background-color: var(--primary-color); color: var(--white); }
+.bg-secondary { background-color: var(--secondary-color); color: var(--white); }
+.bg-accent    { background-color: var(--accent-color); color: var(--white); }
+.bg-white     { background-color: var(--white); color: var(--gray-900); }
+.bg-light     { background-color: var(--gray-50); }
+.bg-dark      { background-color: var(--gray-900); color: var(--white); }
+
+

@@ -1,7 +1,11 @@
+/* ==============================
+   Poppins Font Family
+   ============================== */
+
 /* Poppins Regular */
 @font-face {
     font-family: 'Poppins';
-    src: url('../../fonts/Poppins-Regular.ttf') format('ttf');
+    src: url('../../fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -10,7 +14,7 @@
 /* Poppins Medium */
 @font-face {
     font-family: 'Poppins';
-    src: url('../../fonts/Poppins-Medium.ttf') format('ttf');
+    src: url('../../fonts/Poppins-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -19,7 +23,7 @@
 /* Poppins SemiBold */
 @font-face {
     font-family: 'Poppins';
-    src: url('../../fonts/Poppins-SemiBold.ttf') format('ttf');
+    src: url('../../fonts/Poppins-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -28,7 +32,7 @@
 /* Poppins Bold */
 @font-face {
     font-family: 'Poppins';
-    src: url('../../fonts/Poppins-Bold.ttf') format('ttf');
+    src: url('../../fonts/Poppins-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;

@@ -1,27 +1,34 @@
 :root {
-    /* Colors */
-    --primary-color: #2563eb;
-    --primary-dark: #1e40af;
-    --primary-light: #3b82f6;
-    --secondary-color: #10b981;
-    --accent-color: #f59e0b;
-    --danger-color: #ef4444;
+    /* ==============================
+       🌿 Brand Colors (Organic & Premium)
+    ============================== */
+    --primary-color: #8B5E3C;      /* Rich walnut brown – brand color */
+    --primary-dark: #5A3E26;       /* Deep cocoa – hover, dark accents */
+    --primary-light: #D7B899;      /* Almond tone – subtle highlights */
     
-    /* Neutrals */
+    --secondary-color: #4E944F;    /* Natural green – freshness & health */
+    --accent-color: #E5A443;       /* Honey gold – CTA & premium touch */
+    --danger-color: #C0392B;       /* Muted red – warnings/errors */
+
+    /* ==============================
+       🎨 Neutral Palette
+    ============================== */
     --white: #ffffff;
-    --black: #000000;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
-    
-    /* Spacing */
+    --black: #1A1A1A;
+    --gray-50: #FFF8F0;            /* Warm ivory background */
+    --gray-100: #FAF3E7;
+    --gray-200: #EDE3D8;
+    --gray-300: #D6C6B9;
+    --gray-400: #BFAF9E;
+    --gray-500: #9E8C7A;
+    --gray-600: #7C6A57;
+    --gray-700: #5B4D3F;
+    --gray-800: #3B2F2F;
+    --gray-900: #2A1E1A;
+
+    /* ==============================
+       📏 Spacing Scale
+    ============================== */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -29,11 +36,13 @@
     --space-xl: 2rem;
     --space-2xl: 3rem;
     --space-3xl: 4rem;
-    
-    /* Typography */
-    /* --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; */
-    --font-primary: 'Poppins', sans-serif;  /*=========For Better Readability=========*/
-    --font-secondary: 'Roboto', sans-serif; /*=========For Heding etc=========*/
+
+    /* ==============================
+       ✍️ Typography
+    ============================== */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -41,26 +50,46 @@
     --font-size-xl: 1.25rem;
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 2rem;
-    
-    /* Border Radius */
+
+    /* ==============================
+       🔲 Border Radius
+    ============================== */
     --radius-sm: 0.25rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
     --radius-full: 9999px;
-    
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    
-    /* Container */
+
+    /* ==============================
+       🌤️ Shadows
+    ============================== */
+    --shadow-sm: 0 1px 2px 0 rgba(91, 77, 63, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(91, 77, 63, 0.15);
+    --shadow-lg: 0 10px 15px -3px rgba(91, 77, 63, 0.2);
+    --shadow-xl: 0 20px 25px -5px rgba(91, 77, 63, 0.25);
+
+    /* ==============================
+       📦 Layout
+    ============================== */
     --container-width: 1280px;
     --container-padding: var(--space-lg);
-    
-    /* Transitions */
+
+    /* ==============================
+       ⚡ Transitions
+    ============================== */
     --transition-fast: 150ms ease-in-out;
     --transition-base: 250ms ease-in-out;
     --transition-slow: 350ms ease-in-out;
 }
+
+
+
+/* 💡 Quick Visual Identity Notes
+
+--primary-color: Use for navbar, footer, and key brand areas.
+
+--accent-color: Use for “Add to Cart” / “Buy Now” buttons.
+
+--secondary-color: Use for “Healthy”, “Organic”, or tag highlights.
+
+Backgrounds should be ivory (--gray-50) instead of plain white — feels natural and warm. */

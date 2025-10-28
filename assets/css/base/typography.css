@@ -1,12 +1,40 @@
+/* ===========================
+   Typography
+   =========================== */
+
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     font-weight: 700;
+    font-family: var(--font-primary);
+    color: var(--gray-900);
+    margin-bottom: var(--space-sm);
 }
 
 h1 { font-size: var(--font-size-3xl); }
 h2 { font-size: var(--font-size-2xl); }
 h3 { font-size: var(--font-size-xl); }
+h4 { font-size: var(--font-size-lg); }
+h5 { font-size: var(--font-size-base); }
+h6 { font-size: var(--font-size-sm); }
 
 p {
+    font-family: var(--font-secondary);
+    color: var(--gray-800);
     margin-bottom: var(--space-md);
+    line-height: 1.6;
+}
+
+/* ===========================
+   Responsive Typography
+   =========================== */
+@media (max-width: 992px) {
+    h1 { font-size: var(--font-size-2xl); }
+    h2 { font-size: var(--font-size-xl); }
+    h3 { font-size: var(--font-size-lg); }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: var(--font-size-xl); }
+    h2 { font-size: var(--font-size-lg); }
+    h3 { font-size: var(--font-size-base); }
 }

@@ -1,8 +1,16 @@
+/* ===========================
+   Base + Reset Styles
+   =========================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ===========================
+   Body & Typography
+   =========================== */
 
 body {
     font-family: var(--font-secondary); /* =========for readability========= */
@@ -27,15 +35,30 @@ img {
     display: block;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ===========================
+   Links
+   =========================== */
+
 a {
     text-decoration: none;
     color: inherit;
     transition: color var(--transition-base);
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: var(--primary-color);
+    text-decoration: underline;
 }
+
+/* ===========================
+   Buttons
+   =========================== */
 
 button {
     font-family: var(--font-primary);
@@ -50,7 +73,8 @@ button:disabled {
     cursor: not-allowed;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+button:focus,
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }

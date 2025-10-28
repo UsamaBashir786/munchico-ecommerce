@@ -5,33 +5,48 @@
     margin-top: var(--space-xl);
 }
 
+/* Sidebar */
 .aside {
-    background: var(--white);
+    background: var(--gray-50);                /* warm ivory background */
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
+    border: 1px solid var(--primary-light);    /* almond border for softness */
+    box-shadow: var(--shadow-sm);
     height: fit-content;
     position: sticky;
     top: 80px;
+    transition: box-shadow var(--transition-base);
+}
+
+.aside:hover {
+    box-shadow: var(--shadow-md);              /* soft elevation on hover */
 }
 
 .aside-title {
     font-size: var(--font-size-lg);
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--primary-dark);                /* cocoa brown heading */
     margin-bottom: var(--space-md);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: var(--space-xs);
 }
 
 .aside ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .aside li {
     padding: var(--space-sm) 0;
+    color: var(--gray-700);
     cursor: pointer;
-    transition: var(--transition-base);
+    transition: color var(--transition-base), transform var(--transition-base);
 }
 
 .aside li:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);             /* natural green hover */
+    transform: translateX(4px);                /* slight motion for life */
 }
 
 @media (max-width: 768px) {

@@ -1,55 +1,93 @@
+/* ==============================
+   🍇 Banner
+============================== */
 .banner {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: var(--white);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); /* warm brown gradient */
+    color: var(--gray-50);
     padding: var(--space-3xl) var(--space-xl);
     border-radius: var(--radius-xl);
     text-align: center;
     margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow-md);
 }
 
 .banner h1 {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--space-md);
+    color: var(--accent-color); /* honey-gold title for luxury touch */
 }
 
+.banner p {
+    font-size: var(--font-size-lg);
+    color: var(--gray-100);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ==============================
+   📢 Announcement Bar
+============================== */
 .announcement {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color);  /* golden tone */
     color: var(--white);
     text-align: center;
     padding: var(--space-md);
     border-radius: var(--radius-md);
     margin-bottom: var(--space-xl);
     font-weight: 600;
+    box-shadow: var(--shadow-sm);
 }
 
+/* ==============================
+   🏷️ Section Titles
+============================== */
 .section-title {
     font-size: var(--font-size-2xl);
     font-weight: bold;
     margin-bottom: var(--space-lg);
-    color: var(--gray-900);
+    color: var(--primary-dark);  /* deep cocoa text */
+    text-align: center;
+    position: relative;
 }
 
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: var(--space-sm) auto 0;
+    border-radius: var(--radius-full);
+}
+
+/* ==============================
+   🍬 Category Items
+============================== */
 .category-item {
-    background: var(--white);
+    background: var(--gray-50);
     padding: var(--space-xl);
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: var(--shadow-md);
     cursor: pointer;
-    transition: var(--transition-base);
+    transition: transform var(--transition-base), background var(--transition-base), color var(--transition-base);
 }
 
 .category-item:hover {
     background: var(--primary-color);
-    color: var(--white);
-    transform: scale(1.05);
+    color: var(--gray-50);
+    transform: translateY(-5px);
 }
 
 .category-icon {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--space-sm);
+    color: var(--secondary-color); /* natural green for freshness */
 }
 
+/* ==============================
+   🎞️ Slider Section
+============================== */
 .slider-container {
     position: relative;
     overflow: hidden;
@@ -72,7 +110,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--white);
+    background: var(--accent-color);          /* gold circular buttons */
+    color: var(--white);
     border-radius: var(--radius-full);
     width: 40px;
     height: 40px;
@@ -82,10 +121,11 @@
     box-shadow: var(--shadow-lg);
     z-index: 10;
     cursor: pointer;
+    transition: background var(--transition-base);
 }
 
 .slider-btn:hover {
-    background: var(--gray-100);
+    background: var(--secondary-color);       /* green hover for natural vibe */
 }
 
 .slider-btn.prev { left: 10px; }
@@ -96,15 +136,25 @@
     flex-shrink: 0;
 }
 
+/* ==============================
+   💥 Discount Banner
+============================== */
 .discount-banner {
-    background: linear-gradient(45deg, var(--danger-color), var(--accent-color));
-    color: var(--white);
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    color: var(--gray-50);
     padding: var(--space-2xl);
     border-radius: var(--radius-xl);
     text-align: center;
+    box-shadow: var(--shadow-md);
 }
 
 .discount-banner h2 {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--space-md);
+    color: var(--white);
+}
+
+.discount-banner p {
+    font-size: var(--font-size-lg);
+    color: var(--gray-100);
 }

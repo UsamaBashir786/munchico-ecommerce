@@ -1,7 +1,13 @@
+/* ========================================
+   Form System - Royal CSS Framework
+   ======================================== */
+
+/* Group Wrapper */
 .form-group {
     margin-bottom: var(--space-lg);
 }
 
+/* Labels */
 .form-label {
     display: block;
     margin-bottom: var(--space-sm);
@@ -9,6 +15,7 @@
     color: var(--gray-700);
 }
 
+/* Inputs, Selects, Textareas */
 .form-input,
 .form-select,
 .form-textarea {
@@ -16,22 +23,95 @@
     padding: var(--space-sm) var(--space-md);
     border: 1px solid var(--gray-300);
     border-radius: var(--radius-md);
-    font-family: inherit;
+    background-color: var(--white);
+    color: var(--gray-800);
+    font-family: var(--font-primary);
     font-size: var(--font-size-base);
-    transition: var(--transition-base);
+    transition: all var(--transition-base);
 }
 
+/* Placeholder */
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--gray-400);
+}
+
+/* Focus State */
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.2); /* walnut tone glow */
 }
 
+/* Disabled State */
+.form-input:disabled,
+.form-select:disabled,
+.form-textarea:disabled {
+    background-color: var(--gray-100);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Textarea Resize */
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ========================================
+   Search Bar (Navbar / Header)
+   ======================================== */
 .search-bar {
     padding: var(--space-sm) var(--space-md);
     border: 1px solid var(--gray-300);
     border-radius: var(--radius-md);
     min-width: 300px;
+    background-color: var(--white);
+    transition: all var(--transition-base);
+}
+
+.search-bar:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(78, 148, 79, 0.25);
+}
+
+/* ========================================
+   Validation States
+   ======================================== */
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+    border-color: var(--danger-color);
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+}
+
+.form-input.success,
+.form-select.success,
+.form-textarea.success {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(78, 148, 79, 0.15);
+}
+
+/* ========================================
+   Dark Mode Support
+   ======================================== */
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-textarea {
+    background-color: var(--gray-800);
+    border-color: var(--gray-600);
+    color: var(--gray-100);
+}
+
+[data-theme="dark"] .form-input::placeholder {
+    color: var(--gray-500);
+}
+
+[data-theme="dark"] .form-input:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .form-textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(229, 164, 67, 0.25);
 }
