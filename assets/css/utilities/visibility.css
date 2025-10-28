@@ -1,0 +1,50 @@
+/* ============================================
+   📱 Responsive Visibility Utilities
+   ============================================ */
+
+/* Hide on All Screens */
+.hidden {
+    display: none !important;
+}
+
+/* === Mobile First Breakpoints === */
+/* Small devices (up to 768px) */
+@media (max-width: 768px) {
+    .hide-sm {
+        display: none !important;
+    }
+    .show-sm {
+        display: block !important;
+    }
+}
+
+/* Medium devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hide-md {
+        display: none !important;
+    }
+    .show-md {
+        display: block !important;
+    }
+}
+
+/* Large devices (1025px and above) */
+@media (min-width: 1025px) {
+    .hide-lg {
+        display: none !important;
+    }
+    .show-lg {
+        display: block !important;
+    }
+}
+
+/* === Flex Variants (if you use flex layouts) === */
+@media (max-width: 768px) {
+    .show-sm-flex { display: flex !important; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .show-md-flex { display: flex !important; }
+}
+@media (min-width: 1025px) {
+    .show-lg-flex { display: flex !important; }
+}

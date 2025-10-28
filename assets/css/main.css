@@ -21,6 +21,8 @@
 @import url('utilities/grid.css');
 @import url('utilities/spacing.css');
 @import url('utilities/text.css');
+@import url('utilities/visibility.css');
+@import url('utilities/position.css');
 
 /* Themes */
 @import url('themes/variables.css');

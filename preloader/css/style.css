@@ -1,0 +1,177 @@
+/* ========================================
+   🌿 Royal Code - Full-Screen Skeleton Preloader
+   ======================================== */
+:root {
+  --skeleton-bg: #e0d6cb;
+  --skeleton-shimmer: #f3ece4;
+  --overlay-bg: #fffdf9;
+}
+
+/* Full-Screen Overlay */
+.skeleton-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-bg);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper */
+.skeleton-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Top bar */
+.skeleton-top-bar {
+  width: 100%;
+  height: 20px;
+  background: var(--skeleton-bg);
+  border-radius: 4px;
+}
+
+/* Navbar */
+.skeleton-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(50, 35, 20, 0.1);
+}
+
+.skeleton-logo {
+  width: 100px;
+  height: 28px;
+  background: var(--skeleton-bg);
+  border-radius: 6px;
+}
+
+.skeleton-navlinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.skeleton-nav {
+  width: 60px;
+  height: 18px;
+  background: var(--skeleton-bg);
+  border-radius: 4px;
+}
+
+.skeleton-icons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.skeleton-icon {
+  width: 26px;
+  height: 26px;
+  background: var(--skeleton-bg);
+  border-radius: 50%;
+}
+
+/* Layout */
+.skeleton-main {
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+/* Sidebar */
+.skeleton-aside {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skeleton-side-item {
+  height: 20px;
+  width: 100%;
+  background: var(--skeleton-bg);
+  border-radius: 4px;
+}
+
+/* Main content */
+.skeleton-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skeleton-banner {
+  width: 100%;
+  height: 180px;
+  background: var(--skeleton-bg);
+  border-radius: 10px;
+}
+
+.skeleton-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.skeleton-product {
+  height: 160px;
+  background: var(--skeleton-bg);
+  border-radius: 8px;
+}
+
+/* Shimmer effect */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--skeleton-shimmer),
+    transparent
+  );
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 150%;
+  }
+}
+
+/* Fade out */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skeleton-main {
+    flex-direction: column;
+  }
+  .skeleton-aside {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

@@ -55,6 +55,15 @@ a:focus {
     color: var(--primary-color);
     text-decoration: underline;
 }
+svg {
+    color: var(--gray-100);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+svg:hover {
+    /* color: red; */
+    /* fill: red; */
+}
 
 /* ===========================
    Buttons

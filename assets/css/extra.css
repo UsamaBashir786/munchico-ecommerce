@@ -1,0 +1,139 @@
+/* ==========================================================
+   💎 PREMIUM MOBILE DOCK (Bottom Navbar)
+   For: Royal Code — Dry Fruits eCommerce
+   Author: Usama Bashir
+   ========================================================== */
+
+
+
+/* ===============================
+   MOBILE MENU DOCK (Bottom Navbar)
+=============================== */
+.mobile-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark),
+    var(--primary-color)
+  );
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  animation: dock-appear 0.4s ease-out;
+}
+
+/* Dock Link */
+.mobile-dock a {
+  color: var(--gray-100);
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Icon */
+.mobile-dock a svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+/* Hover + Active States */
+.mobile-dock a:hover,
+.mobile-dock a.active {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.mobile-dock a:hover svg,
+.mobile-dock a.active svg {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* Only visible on mobile */
+@media (max-width: 768px) {
+  .mobile-dock {
+    display: flex;
+  }
+  .top-bar {
+    display: none;
+  }
+}
+
+/* Entry animation */
+@keyframes dock-appear {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+/* ===============================
+   Header Style
+=============================== */
+header a{
+    color: var(--white) !important;
+}
+.icons-span span{
+    border-radius: var(--radius-full); 
+    background-color: var(--accent-color);
+    padding: 1px 8px;
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+    top: -13px;
+    right: -17px;
+    position: absolute;
+}
+
+.icons-span-docker .value{
+    border-radius: var(--radius-full); 
+    background-color: var(--accent-color);
+    padding: 1px 8px;
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+    top: -9px;
+    right: -19px;
+    position: absolute;
+    color: var(--white) !important;
+}
+.icons-span-docker .value-two{
+    top: -8px;
+    right: -10px;
+}
+
+
+
+/* ===============================
+   Header Style
+=============================== */
+
+.search-bar a{
+  text-decoration: none;
+}
