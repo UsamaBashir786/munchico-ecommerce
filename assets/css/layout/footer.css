@@ -14,7 +14,7 @@
 }
 
 .footer-title {
-    color: var(--accent-color);                 /* honey gold headings */
+    color: var(--white);                 /* honey gold headings */
     font-weight: 600;
     margin-bottom: var(--space-md);
     text-transform: uppercase;
@@ -55,4 +55,8 @@
 }
 .footer-bottom a:hover {
     color: var(--secondary-color);
+}
+
+.footer-bottom p{
+    color: var(--white);
 }

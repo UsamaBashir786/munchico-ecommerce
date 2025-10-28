@@ -4,8 +4,6 @@
    Author: Usama Bashir
    ========================================================== */
 
-
-
 /* ===============================
    MOBILE MENU DOCK (Bottom Navbar)
 =============================== */
@@ -89,51 +87,228 @@
   }
 }
 
-
-
-
-
-
-
 /* ===============================
    Header Style
 =============================== */
-header a{
-    color: var(--white) !important;
+header a {
+  color: var(--white) !important;
 }
-.icons-span span{
-    border-radius: var(--radius-full); 
-    background-color: var(--accent-color);
-    padding: 1px 8px;
-    font-size: var(--font-size-xs);
-    font-weight: bold;
-    top: -13px;
-    right: -17px;
-    position: absolute;
-}
-
-.icons-span-docker .value{
-    border-radius: var(--radius-full); 
-    background-color: var(--accent-color);
-    padding: 1px 8px;
-    font-size: var(--font-size-xs);
-    font-weight: bold;
-    top: -9px;
-    right: -19px;
-    position: absolute;
-    color: var(--white) !important;
-}
-.icons-span-docker .value-two{
-    top: -8px;
-    right: -10px;
+.icons-span span {
+  border-radius: var(--radius-full);
+  background-color: var(--accent-color);
+  padding: 1px 8px;
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+  top: -13px;
+  right: -17px;
+  position: absolute;
 }
 
-
+.icons-span-docker .value {
+  border-radius: var(--radius-full);
+  background-color: var(--accent-color);
+  padding: 1px 8px;
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+  top: -9px;
+  right: -19px;
+  position: absolute;
+  color: var(--white) !important;
+}
+.icons-span-docker .value-two {
+  top: -8px;
+  right: -10px;
+}
 
 /* ===============================
    Header Style
 =============================== */
 
-.search-bar a{
+.search-bar a {
   text-decoration: none;
 }
+
+/* ===============================
+   FOOTER Style
+=============================== */
+
+/* ===============================
+   FOOTER Style
+=============================== */
+.footer-section {
+  padding: 0 15px;
+}
+
+.footer-section p{
+  color: var(--white);
+}
+
+.footer-about p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: rgba(255, 193, 7, 0.2);
+  transform: translateY(-3px);
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.newsletter-button {
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: #3e2723;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #ffca28;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-icon {
+  margin-top: 3px;
+  font-size: 18px;
+  color: #ffc107;
+}
+@media (max-width:1316px){
+  .footer-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+  }  
+}
+/* Responsive styles */
+@media (max-width: 810px) {
+  .footer-about img{
+    margin: 0 auto;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-section {
+    padding: 0;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-input,
+  .newsletter-button {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+    text-align: left;
+    max-width: 300px;
+  }
+
+  .footer-bottom {
+    padding-top: 1.5rem;
+  }
+
+  .footer-bottom p {
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .social-links a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-links a svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .newsletter-input,
+  .newsletter-button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .contact-icon {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom a {
+    display: inline-block;
+    margin: 0.25rem 0;
+    padding-bottom: 50px;
+  }
+}
+
+
+
