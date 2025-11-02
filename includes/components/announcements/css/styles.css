@@ -1,0 +1,135 @@
+/* ========================================
+   🍂 ANNOUNCEMENT BANNER (Light Theme)
+   Width matched with Category Banner
+   ======================================== */
+
+.announcement {
+  padding: var(--space-sm) 0;
+  background-color: rgba(245, 245, 245, 0.95); /* ✅ soft light gray background */
+  color: var(--text-color, #333);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Container to match banner width */
+.announcement .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.announcement-marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,  /* ✅ light gray gradient */
+    rgba(240, 240, 240, 0.9) 100%
+  );
+  padding: var(--space-sm) var(--space-md);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* subtle soft shadow */
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  animation: marquee 20s linear infinite;
+  flex-shrink: 0;
+  gap: var(--space-xl);
+  color: #333; /* readable dark gray text */
+}
+
+.announcement-item {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.announcement-item:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* light hover effect */
+}
+
+.announcement-separator {
+  width: 1px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.15);
+  opacity: 0.5;
+}
+
+/* Infinite marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause on hover */
+.announcement:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Main overflow fix */
+main {
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .announcement .container {
+    padding: 0 var(--space-lg);
+  }
+  .marquee-content {
+    animation-duration: 15s;
+    gap: var(--space-lg);
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .announcement .container {
+    padding: 0 var(--space-md);
+  }
+  .announcement-marquee {
+    border-radius: var(--radius-lg);
+    padding: var(--space-xs) var(--space-md);
+  }
+  .marquee-content {
+    animation-duration: 12s;
+    gap: var(--space-md);
+  }
+  .announcement-item {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .announcement .container {
+    padding: 0 var(--space-sm);
+  }
+  .announcement-marquee {
+    border-radius: var(--radius-md);
+  }
+  .marquee-content {
+    animation-duration: 10s;
+    gap: var(--space-sm);
+  }
+  .announcement-item {
+    font-size: 0.8rem;
+    padding: var(--space-xs);
+  }
+}
+  

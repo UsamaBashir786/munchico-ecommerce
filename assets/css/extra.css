@@ -88,37 +88,41 @@
 }
 
 /* ===============================
-   Header Style
+   HEADER STYLES
 =============================== */
 header a {
   color: var(--white) !important;
 }
-.icons-span span {
+
+/* General icon badge style */
+.icons-span span,
+.icons-span-docker .value,
+.icons-span-docker .value-two {
+  position: absolute;
   border-radius: var(--radius-full);
   background-color: var(--accent-color);
-  padding: 1px 8px;
+  color: var(--white);
   font-size: var(--font-size-xs);
   font-weight: bold;
+  padding: 1px 8px;
+}
+
+/* Specific position adjustments */
+.icons-span span {
   top: -13px;
   right: -17px;
-  position: absolute;
 }
 
 .icons-span-docker .value {
-  border-radius: var(--radius-full);
-  background-color: var(--accent-color);
-  padding: 1px 8px;
-  font-size: var(--font-size-xs);
-  font-weight: bold;
   top: -9px;
   right: -19px;
-  position: absolute;
-  color: var(--white) !important;
 }
+
 .icons-span-docker .value-two {
   top: -8px;
   right: -10px;
 }
+
 
 /* ===============================
    Header Style
