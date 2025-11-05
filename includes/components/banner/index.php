@@ -1,11 +1,12 @@
-<section class="banner-section" aria-label="Promotional Banner">
-<div class="container">
-<div class="promotional-banner"></div>
-<div class="text-center mt-xl">
-<button class="banner-shop-btn">SHOP NOW</button>
-</div>
-</div>
+<section class="banner-section rc-both rc-ease-in rc-delay-rc-delay-150" aria-label="Promotional Banner">
+    <div class="container">
+        <div class="promotional-banner"></div>
+        <div class="text-center mt-xl">
+            <button class="banner-shop-btn">SHOP NOW</button>
+        </div>
+    </div>
 </section>
+
 
 <style>
 .banner-section{padding:var(--space-xl) 0;background:var(--gray-50)}

@@ -39,54 +39,71 @@
 
 
 <div id="preloader">
-<div class="skeleton-loader-container">
-<div class="skeleton-top-bar skeleton-shape"></div>
-<div class="skeleton-header">
-<div class="skeleton-logo skeleton-shape"></div>
-<div class="skeleton-nav">
-<div class="skeleton-nav-item skeleton-shape"></div>
-<div class="skeleton-nav-item skeleton-shape"></div>
-<div class="skeleton-nav-item skeleton-shape"></div>
-<div class="skeleton-nav-item skeleton-shape"></div>
-</div>
-<div class="skeleton-buttons">
-<div class="skeleton-button skeleton-shape"></div>
-<div class="skeleton-button skeleton-shape"></div>
-</div>
-</div>
-<div class="skeleton-announce-bar skeleton-shape"></div>
-<div class="skeleton-content-layout">
-<div class="skeleton-aside">
-<div class="skeleton-aside-item skeleton-shape"></div>
-<div class="skeleton-aside-item skeleton-shape"></div>
-<div class="skeleton-aside-item skeleton-shape"></div>
-<div class="skeleton-aside-item skeleton-shape"></div>
-<div class="skeleton-aside-item skeleton-shape"></div>
-</div>
-<div class="skeleton-main-content">
-<div class="skeleton-hero skeleton-shape"></div>
-</div>
-</div>
-<div class="skeleton-section-title skeleton-shape"></div>
-<div class="skeleton-card-row">
-<div class="skeleton-card skeleton-shape"></div>
-<div class="skeleton-card skeleton-shape"></div>
-<div class="skeleton-card skeleton-shape"></div>
-<div class="skeleton-card skeleton-shape"></div>
-<div class="skeleton-card skeleton-shape"></div>
-</div>
-<div class="skeleton-full-banner skeleton-shape"></div>
-<div class="skeleton-section-title skeleton-shape"></div>
-<div class="skeleton-card-row">
-<div class="skeleton-card skeleton-shape"></div>
-<div class="skeleton-card skeleton-shape"></div>
-<div class="skeleton-card skeleton-shape"></div>
-<div class="skeleton-card skeleton-shape"></div>
-<div class="skeleton-card skeleton-shape"></div>
-</div>
-</div>
+    <div class="skeleton-loader-container">
+        <div class="skeleton-top-bar skeleton-shape"></div>
+        <div class="skeleton-header">
+            <div class="skeleton-logo skeleton-shape"></div>
+            <div class="skeleton-nav">
+                <div class="skeleton-nav-item skeleton-shape"></div>
+                <div class="skeleton-nav-item skeleton-shape"></div>
+                <div class="skeleton-nav-item skeleton-shape"></div>
+                <div class="skeleton-nav-item skeleton-shape"></div>
+            </div>
+            <div class="skeleton-buttons">
+                <div class="skeleton-button skeleton-shape"></div>
+                <div class="skeleton-button skeleton-shape"></div>
+            </div>
+        </div>
+        <div class="skeleton-announce-bar skeleton-shape"></div>
+        <div class="skeleton-content-layout">
+            <div class="skeleton-aside">
+                <div class="skeleton-aside-item skeleton-shape"></div>
+                <div class="skeleton-aside-item skeleton-shape"></div>
+                <div class="skeleton-aside-item skeleton-shape"></div>
+                <div class="skeleton-aside-item skeleton-shape"></div>
+                <div class="skeleton-aside-item skeleton-shape"></div>
+            </div>
+            <div class="skeleton-main-content">
+                <div class="skeleton-hero skeleton-shape"></div>
+            </div>
+        </div>
+        <div class="skeleton-section-title skeleton-shape"></div>
+        <div class="skeleton-card-row">
+            <div class="skeleton-card skeleton-shape"></div>
+            <div class="skeleton-card skeleton-shape"></div>
+            <div class="skeleton-card skeleton-shape"></div>
+            <div class="skeleton-card skeleton-shape"></div>
+            <div class="skeleton-card skeleton-shape"></div>
+        </div>
+        <div class="skeleton-full-banner skeleton-shape"></div>
+        <div class="skeleton-section-title skeleton-shape"></div>
+        <div class="skeleton-card-row">
+            <div class="skeleton-card skeleton-shape"></div>
+            <div class="skeleton-card skeleton-shape"></div>
+            <div class="skeleton-card skeleton-shape"></div>
+            <div class="skeleton-card skeleton-shape"></div>
+            <div class="skeleton-card skeleton-shape"></div>
+        </div>
+    </div>
 </div>
 
+
 <script>
-window.addEventListener('load',()=>{const p=document.getElementById('preloader');if(p){p.style.opacity='0';p.addEventListener('transitionend',()=>{p.style.display='none'})}});
+    window.addEventListener('load', () => {
+    const p = document.getElementById('preloader');
+    
+    // ===== PRELOADER CONFIGURATION =====
+    const PRELOADER_DELAY = 1200; // Set delay in milliseconds (0 = no delay, 1000 = 1 second, 2000 = 2 seconds, etc.)
+    // To disable preloader completely, set to 0 or comment out the entire script
+    // ====================================
+    
+    if (p) {
+        setTimeout(() => {
+            p.style.opacity = '0';
+            p.addEventListener('transitionend', () => {
+                p.style.display = 'none';
+            });
+        }, PRELOADER_DELAY);
+    }
+});
 </script>

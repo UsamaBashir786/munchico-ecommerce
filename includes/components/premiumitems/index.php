@@ -1,4 +1,4 @@
-<section class="munchico-premium-items py-xl" aria-labelledby="munchico-premium-items-title-1">
+<section class="rc-both rc-ease-in rc-delay-rc-delay-150  munchico-premium-items py-xl" aria-labelledby="munchico-premium-items-title-1">
     <div class="container">
         <!-- Banner with 50% OFF -->
         <div class="munchico-premium-banner mb-xl">
@@ -92,7 +92,7 @@
         <!-- 2-Column Grid Layout -->
         <div class="grid grid-2 gap-xl">
             <!-- Featured Category 1 -->
-            <div class="munchico-featured-category">
+            <div class=" munchico-featured-category">
                 <div class="munchico-featured-content">
                     <h2 class="munchico-featured-title">ORGANIC FOOD SPICES</h2>
                     <p class="munchico-featured-subtitle">Add Spice to Your Life!</p>
@@ -102,8 +102,18 @@
                     <img src="assets/img/product.webp" alt="Yellow Spice" class="munchico-featured-img munchico-center-img">
                     <img src="assets/img/product.webp" alt="Orange Spice" class="munchico-featured-img">
                 </div>
-                <img src="assets/img/product.webp" alt="Chili decoration" class="munchico-decoration-icon munchico-chili">
-                <img src="assets/img/product.webp" alt="Herb decoration" class="munchico-decoration-icon munchico-herb">
+                <svg class="munchico-decoration-icon munchico-chili" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 30 10 Q 25 15 25 25 L 28 50 L 32 50 L 35 25 Q 35 15 30 10" fill="#DC143C"/>
+                    <ellipse cx="30" cy="12" rx="8" ry="5" fill="#228B22"/>
+                    <path d="M 30 12 Q 35 8 38 10" stroke="#228B22" stroke-width="2" fill="none"/>
+                </svg>
+                <svg class="munchico-decoration-icon munchico-herb" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 25 45 L 25 15" stroke="#228B22" stroke-width="2"/>
+                    <ellipse cx="25" cy="15" rx="12" ry="8" fill="#32CD32"/>
+                    <ellipse cx="20" cy="20" rx="8" ry="6" fill="#32CD32"/>
+                    <ellipse cx="30" cy="20" rx="8" ry="6" fill="#32CD32"/>
+                    <ellipse cx="25" cy="28" rx="10" ry="7" fill="#32CD32"/>
+                </svg>                
             </div>
 
             <!-- Featured Category 2 -->
@@ -117,8 +127,24 @@
                     <img src="assets/img/product.webp" alt="Sunflower Seeds" class="munchico-featured-img munchico-center-img">
                     <img src="assets/img/product.webp" alt="Brown Seeds" class="munchico-featured-img">
                 </div>
-                <img src="assets/img/product.webp" alt="Sunflower decoration" class="munchico-decoration-icon munchico-sunflower">
-                <img src="assets/img/product.webp" alt="Peanut decoration" class="munchico-decoration-icon munchico-peanut">
+                <svg class="munchico-decoration-icon munchico-sunflower" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="35" cy="35" r="15" fill="#8B4513"/>
+                    <g transform="translate(35, 35)">
+                        <ellipse cx="0" cy="-25" rx="8" ry="15" fill="#FFD700"/>
+                        <ellipse cx="18" cy="-18" rx="8" ry="15" fill="#FFD700" transform="rotate(45 18 -18)"/>
+                        <ellipse cx="25" cy="0" rx="8" ry="15" fill="#FFD700" transform="rotate(90 25 0)"/>
+                        <ellipse cx="18" cy="18" rx="8" ry="15" fill="#FFD700" transform="rotate(135 18 18)"/>
+                        <ellipse cx="0" cy="25" rx="8" ry="15" fill="#FFD700" transform="rotate(180 0 25)"/>
+                        <ellipse cx="-18" cy="18" rx="8" ry="15" fill="#FFD700" transform="rotate(225 -18 18)"/>
+                        <ellipse cx="-25" cy="0" rx="8" ry="15" fill="#FFD700" transform="rotate(270 -25 0)"/>
+                        <ellipse cx="-18" cy="-18" rx="8" ry="15" fill="#FFD700" transform="rotate(315 -18 -18)"/>
+                    </g>
+                </svg>
+                <svg class="munchico-decoration-icon munchico-peanut" viewBox="0 0 55 55" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 15 27.5 Q 15 15 27.5 15 Q 35 15 37 22 Q 39 15 46 15 Q 55 15 55 27.5 Q 55 40 46 40 Q 39 40 37 33 Q 35 40 27.5 40 Q 15 40 15 27.5" fill="#D2691E"/>
+                    <ellipse cx="22" cy="25" rx="3" ry="5" fill="#8B4513"/>
+                    <ellipse cx="48" cy="25" rx="3" ry="5" fill="#8B4513"/>
+                </svg>
             </div>
 
             <!-- Featured Category 3 -->
@@ -132,8 +158,19 @@
                     <img src="assets/img/product.webp" alt="Golden Dates" class="munchico-featured-img munchico-center-img">
                     <img src="assets/img/product.webp" alt="Dark Dates" class="munchico-featured-img">
                 </div>
-                <img src="assets/img/product.webp" alt="Palm decoration" class="munchico-decoration-icon munchico-palm">
-            </div>
+                <svg class="munchico-decoration-icon munchico-palm" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 32.5 60 L 32.5 30" stroke="#8B4513" stroke-width="3"/>
+                    <path d="M 32.5 30 Q 15 25 10 15" stroke="#228B22" stroke-width="2.5" fill="none"/>
+                    <path d="M 32.5 30 Q 25 20 20 10" stroke="#228B22" stroke-width="2.5" fill="none"/>
+                    <path d="M 32.5 30 Q 32.5 15 32.5 5" stroke="#228B22" stroke-width="2.5" fill="none"/>
+                    <path d="M 32.5 30 Q 40 20 45 10" stroke="#228B22" stroke-width="2.5" fill="none"/>
+                    <path d="M 32.5 30 Q 50 25 55 15" stroke="#228B22" stroke-width="2.5" fill="none"/>
+                    <ellipse cx="10" cy="12" rx="8" ry="15" fill="#32CD32"/>
+                    <ellipse cx="20" cy="8" rx="8" ry="15" fill="#32CD32"/>
+                    <ellipse cx="32.5" cy="5" rx="8" ry="15" fill="#32CD32"/>
+                    <ellipse cx="45" cy="8" rx="8" ry="15" fill="#32CD32"/>
+                    <ellipse cx="55" cy="12" rx="8" ry="15" fill="#32CD32"/>
+                </svg>            </div>
 
             <!-- Featured Category 4 -->
             <div class="munchico-featured-category">
@@ -146,7 +183,13 @@
                     <img src="assets/img/product.webp" alt="Premium Chips" class="munchico-featured-img munchico-center-img">
                     <img src="assets/img/product.webp" alt="Trail Mix" class="munchico-featured-img">
                 </div>
-                <img src="assets/img/product.webp" alt="Chip decoration" class="munchico-decoration-icon munchico-chip">
+                <svg class="munchico-decoration-icon munchico-chip" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="30" cy="30" rx="28" ry="15" fill="#FFD700"/>
+                    <ellipse cx="30" cy="30" rx="25" ry="13" fill="#FFA500" opacity="0.9"/>
+                    <path d="M 15 25 Q 30 22 45 25" stroke="#FF8C00" stroke-width="1.5" fill="none"/>
+                    <path d="M 15 30 Q 30 27 45 30" stroke="#FF8C00" stroke-width="1.5" fill="none"/>
+                    <path d="M 15 35 Q 30 32 45 35" stroke="#FF8C00" stroke-width="1.5" fill="none"/>
+                </svg>                
             </div>
         </div>
     </div>

@@ -1,184 +1,280 @@
-<section class="munchico-dried-fruits py-xl" aria-labelledby="munchico-dried-fruits-title">
-<div class="container">
-<h2 id="munchico-dried-fruits-title" class="munchico-section-title">
-<span class="munchico-title-line">—</span>
-Dried Fruits
-<span class="munchico-title-line">—</span>
-</h2>
-<div class="munchico-product-slider-wrapper">
-<button class="munchico-slider-nav-btn munchico-prev-btn" aria-label="Previous products">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M15 18l-6-6 6-6"/>
-</svg>
-</button>
-<div class="munchico-product-slider">
-<div class="munchico-product-slider-card">
-<div class="munchico-product-slider-image">
-<img src="assets/img/download.webp" alt="Dried Apricots">
-<span class="munchico-discount-badge">-25%</span>
-<span class="munchico-quality-badge">HIGH QUALITY</span>
-<span class="munchico-brand-small-badge">PREMIUM</span>
-<div class="munchico-product-actions">
-<button class="munchico-action-btn" aria-label="Add to wishlist">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-</svg>
-</button>
-<button class="munchico-action-btn" aria-label="Add to cart">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-<line x1="3" y1="6" x2="21" y2="6"/>
-<path d="M16 10a4 4 0 0 1-8 0"/>
-</svg>
-</button>
-<button class="munchico-action-btn" aria-label="Quick view">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-<circle cx="12" cy="12" r="3"/>
-</svg>
-</button>
-</div>
-<button class="munchico-order-now-btn">ORDER NOW</button>
-</div>
-<div class="munchico-product-slider-content">
-<h3 class="munchico-product-slider-title">Premium Dried Apricots 500g...</h3>
-<div class="munchico-product-rating">
-<span class="munchico-stars">★★★★★</span>
-<span class="munchico-review-count">8 Reviews</span>
-</div>
-<div class="munchico-product-price">
-<span class="munchico-price-current">Rs.1,500.00</span>
-<span class="munchico-price-old">Rs.2,000.00</span>
-</div>
-</div>
-</div>
-<div class="munchico-product-slider-card">
-<div class="munchico-product-slider-image">
-<img src="assets/img/download.webp" alt="Premium Dates">
-<span class="munchico-discount-badge">-15%</span>
-<span class="munchico-quality-badge">HIGH QUALITY</span>
-<span class="munchico-brand-small-badge">PREMIUM</span>
-<div class="munchico-product-actions">
-<button class="munchico-action-btn" aria-label="Add to wishlist">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-</svg>
-</button>
-<button class="munchico-action-btn" aria-label="Add to cart">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-<line x1="3" y1="6" x2="21" y2="6"/>
-<path d="M16 10a4 4 0 0 1-8 0"/>
-</svg>
-</button>
-<button class="munchico-action-btn" aria-label="Quick view">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-<circle cx="12" cy="12" r="3"/>
-</svg>
-</button>
-</div>
-<button class="munchico-order-now-btn">ORDER NOW</button>
-</div>
-<div class="munchico-product-slider-content">
-<h3 class="munchico-product-slider-title">Medjool Dates Premium 1kg...</h3>
-<div class="munchico-product-rating">
-<span class="munchico-stars">★★★★★</span>
-<span class="munchico-review-count">12 Reviews</span>
-</div>
-<div class="munchico-product-price">
-<span class="munchico-price-current">Rs.2,550.00</span>
-<span class="munchico-price-old">Rs.3,000.00</span>
-</div>
-</div>
-</div>
-<div class="munchico-product-slider-card">
-<div class="munchico-product-slider-image">
-<img src="assets/img/download.webp" alt="Golden Raisins">
-<span class="munchico-quality-badge">HIGH QUALITY</span>
-<span class="munchico-brand-small-badge">PREMIUM</span>
-<div class="munchico-product-actions">
-<button class="munchico-action-btn" aria-label="Add to wishlist">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-</svg>
-</button>
-<button class="munchico-action-btn" aria-label="Add to cart">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-<line x1="3" y1="6" x2="21" y2="6"/>
-<path d="M16 10a4 4 0 0 1-8 0"/>
-</svg>
-</button>
-<button class="munchico-action-btn" aria-label="Quick view">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-<circle cx="12" cy="12" r="3"/>
-</svg>
-</button>
-</div>
-<button class="munchico-order-now-btn">ORDER NOW</button>
-</div>
-<div class="munchico-product-slider-content">
-<h3 class="munchico-product-slider-title">Golden Raisins 500g Pack...</h3>
-<div class="munchico-product-rating">
-<span class="munchico-stars">★★★★☆</span>
-<span class="munchico-review-count">6 Reviews</span>
-</div>
-<div class="munchico-product-price">
-<span class="munchico-price-current">Rs.850.00</span>
-</div>
-</div>
-</div>
-<div class="munchico-product-slider-card">
-<div class="munchico-product-slider-image">
-<img src="assets/img/download.webp" alt="Dried Figs">
-<span class="munchico-discount-badge">-20%</span>
-<span class="munchico-quality-badge">HIGH QUALITY</span>
-<span class="munchico-brand-small-badge">PREMIUM</span>
-<div class="munchico-product-actions">
-<button class="munchico-action-btn" aria-label="Add to wishlist">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-</svg>
-</button>
-<button class="munchico-action-btn" aria-label="Add to cart">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-<line x1="3" y1="6" x2="21" y2="6"/>
-<path d="M16 10a4 4 0 0 1-8 0"/>
-</svg>
-</button>
-<button class="munchico-action-btn" aria-label="Quick view">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-<circle cx="12" cy="12" r="3"/>
-</svg>
-</button>
-</div>
-<button class="munchico-order-now-btn">ORDER NOW</button>
-</div>
-<div class="munchico-product-slider-content">
-<h3 class="munchico-product-slider-title">Organic Dried Figs 250g...</h3>
-<div class="munchico-product-rating">
-<span class="munchico-stars">★★★★★</span>
-<span class="munchico-review-count">4 Reviews</span>
-</div>
-<div class="munchico-product-price">
-<span class="munchico-price-current">Rs.1,200.00</span>
-<span class="munchico-price-old">Rs.1,500.00</span>
-</div>
-</div>
-</div>
-</div>
-<button class="munchico-slider-nav-btn munchico-next-btn" aria-label="Next products">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M9 18l6-6-6-6"/>
-</svg>
-</button>
-</div>
-</div>
+<section
+    class="munchico-dried-fruits py-xl rc-both rc-ease-in rc-delay-rc-delay-150"
+    aria-labelledby="munchico-dried-fruits-title"
+>
+    <div class="container">
+        <h2 id="munchico-dried-fruits-title" class="munchico-section-title">
+            <span class="munchico-title-line">—</span>
+            Dried Fruits
+            <span class="munchico-title-line">—</span>
+        </h2>
+        <div class="munchico-product-slider-wrapper">
+            <button class="munchico-slider-nav-btn munchico-prev-btn" aria-label="Previous products">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+            </button>
+            <div class="munchico-product-slider">
+                <div class="munchico-product-slider-card">
+                    <div class="munchico-product-slider-image">
+                        <img src="assets/img/download.webp" alt="Dried Apricots" />
+                        <span class="munchico-discount-badge">-25%</span>
+                        <span class="munchico-quality-badge">HIGH QUALITY</span>
+                        <span class="munchico-brand-small-badge">PREMIUM</span>
+                        <div class="munchico-product-actions">
+                            <button class="munchico-action-btn" aria-label="Add to wishlist">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="munchico-action-btn" aria-label="Add to cart">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </button>
+                            <button class="munchico-action-btn" aria-label="Quick view">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="munchico-order-now-btn">ORDER NOW</button>
+                    </div>
+                    <div class="munchico-product-slider-content">
+                        <h3 class="munchico-product-slider-title">Premium Dried Apricots 500g...</h3>
+                        <div class="munchico-product-rating">
+                            <span class="munchico-stars">★★★★★</span>
+                            <span class="munchico-review-count">8 Reviews</span>
+                        </div>
+                        <div class="munchico-product-price">
+                            <span class="munchico-price-current">Rs.1,500.00</span>
+                            <span class="munchico-price-old">Rs.2,000.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="munchico-product-slider-card">
+                    <div class="munchico-product-slider-image">
+                        <img src="assets/img/download.webp" alt="Premium Dates" />
+                        <span class="munchico-discount-badge">-15%</span>
+                        <span class="munchico-quality-badge">HIGH QUALITY</span>
+                        <span class="munchico-brand-small-badge">PREMIUM</span>
+                        <div class="munchico-product-actions">
+                            <button class="munchico-action-btn" aria-label="Add to wishlist">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="munchico-action-btn" aria-label="Add to cart">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </button>
+                            <button class="munchico-action-btn" aria-label="Quick view">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="munchico-order-now-btn">ORDER NOW</button>
+                    </div>
+                    <div class="munchico-product-slider-content">
+                        <h3 class="munchico-product-slider-title">Medjool Dates Premium 1kg...</h3>
+                        <div class="munchico-product-rating">
+                            <span class="munchico-stars">★★★★★</span>
+                            <span class="munchico-review-count">12 Reviews</span>
+                        </div>
+                        <div class="munchico-product-price">
+                            <span class="munchico-price-current">Rs.2,550.00</span>
+                            <span class="munchico-price-old">Rs.3,000.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="munchico-product-slider-card">
+                    <div class="munchico-product-slider-image">
+                        <img src="assets/img/download.webp" alt="Golden Raisins" />
+                        <span class="munchico-quality-badge">HIGH QUALITY</span>
+                        <span class="munchico-brand-small-badge">PREMIUM</span>
+                        <div class="munchico-product-actions">
+                            <button class="munchico-action-btn" aria-label="Add to wishlist">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="munchico-action-btn" aria-label="Add to cart">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </button>
+                            <button class="munchico-action-btn" aria-label="Quick view">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="munchico-order-now-btn">ORDER NOW</button>
+                    </div>
+                    <div class="munchico-product-slider-content">
+                        <h3 class="munchico-product-slider-title">Golden Raisins 500g Pack...</h3>
+                        <div class="munchico-product-rating">
+                            <span class="munchico-stars">★★★★☆</span>
+                            <span class="munchico-review-count">6 Reviews</span>
+                        </div>
+                        <div class="munchico-product-price">
+                            <span class="munchico-price-current">Rs.850.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="munchico-product-slider-card">
+                    <div class="munchico-product-slider-image">
+                        <img src="assets/img/download.webp" alt="Dried Figs" />
+                        <span class="munchico-discount-badge">-20%</span>
+                        <span class="munchico-quality-badge">HIGH QUALITY</span>
+                        <span class="munchico-brand-small-badge">PREMIUM</span>
+                        <div class="munchico-product-actions">
+                            <button class="munchico-action-btn" aria-label="Add to wishlist">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="munchico-action-btn" aria-label="Add to cart">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </button>
+                            <button class="munchico-action-btn" aria-label="Quick view">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="munchico-order-now-btn">ORDER NOW</button>
+                    </div>
+                    <div class="munchico-product-slider-content">
+                        <h3 class="munchico-product-slider-title">Organic Dried Figs 250g...</h3>
+                        <div class="munchico-product-rating">
+                            <span class="munchico-stars">★★★★★</span>
+                            <span class="munchico-review-count">4 Reviews</span>
+                        </div>
+                        <div class="munchico-product-price">
+                            <span class="munchico-price-current">Rs.1,200.00</span>
+                            <span class="munchico-price-old">Rs.1,500.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="munchico-slider-nav-btn munchico-next-btn" aria-label="Next products">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </section>
+
 
 <style>
 .munchico-featured-products,.munchico-dried-fruits{background:var(--gray-50)}

@@ -1,4 +1,4 @@
-<section class="featured-products py-xl" aria-labelledby="featured-products-title">
+<section class="featured-products py-xl rc-both rc-ease-in rc-delay-rc-delay-150" aria-labelledby="featured-products-title">
     <div class="container">
         <!-- Section Title -->
         <h2 id="featured-products-title" class="section-title">
@@ -306,7 +306,7 @@
     </div>
 </section>
 <style>
-    .featured-products{background:var(--gray-50);padding:var(--space-xl) 0}
+.featured-products{background:var(--gray-50);padding:var(--space-xl) 0}
 .section-title{display:flex;align-items:center;justify-content:center;gap:var(--space-lg);font-size:var(--font-size-2xl);font-weight:700;color:var(--gray-900);margin-bottom:var(--space-2xl);text-transform:capitalize}
 .title-line{color:var(--secondary-color);font-weight:400}
 .product-slider-wrapper{position:relative;padding:0 var(--space-3xl)}

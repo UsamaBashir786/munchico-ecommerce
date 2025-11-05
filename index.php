@@ -224,7 +224,7 @@
   <!-- Contains contact info, social links, and legal pages -->
   <!-- ========================================================= -->
   <?php include 'includes/footer.php' ?>
-
+  <?php include 'includes/components/top-to-bottom/index.php' ?>
   <!-- ========================================================= -->
   <!-- ⚡ JAVASCRIPT FILES -->
   <!-- Handles dynamic behavior, initialization, and components -->
