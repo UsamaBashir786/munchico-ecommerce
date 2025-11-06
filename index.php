@@ -173,7 +173,9 @@
       <!-- The main visual section for page intro or highlights -->
       <!-- ========================================================= -->
       <section class="hero-banner" aria-label="Main Banner">
+
       </section>
+      <?php include 'includes/components/hero/index.php' ?>
   
       <!-- ========================================================= -->
       <!-- 🗂️ CATEGORY SECTION -->

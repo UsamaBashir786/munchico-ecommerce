@@ -1,6 +1,47 @@
 <!-- ==========================================
      STRUCTURE 1: HORIZONTAL CARD LAYOUT
      ========================================== -->
+     <section class="section-title">
+  <h2 class="title">🌿 Feature</h2>
+  <p class="subtitle">Crafted with care, inspired by nature.</p>
+</section>
+<style>
+    .section-title {
+  /* text-align: center; */
+  max-width: 700px;
+  /* margin: var(--space-3xl) auto var(--space-2xl); */
+  padding: 0 var(--container-padding);
+}
+
+.section-title .title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-3xl);
+  color: var(--primary-dark);
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title .title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: var(--radius-full);
+  margin: var(--space-sm) auto 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title .subtitle {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+  color: var(--gray-600);
+  margin-top: var(--space-xs);
+}
+
+</style>
 <section class="features-horizontal">
     <div class="container">
         <div class="features-wrapper-h">
