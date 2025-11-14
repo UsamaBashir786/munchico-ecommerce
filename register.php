@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -14,7 +17,6 @@
         <link rel="stylesheet" href="assets/main.css" />
     </head>
     <body>
-        <a href="index.html" class="back-home-btn">← Back to Home</a>
         <style>
             .back-home-btn {
                 /* display: inline-flex; */
@@ -34,106 +36,115 @@
                 transform: translateX(-3px);
             }
         </style>
-        <div class="auth-container">
-            <div class="auth-left">
-                <div class="brand-section">
-                    <h1 class="brand-logo">MUNCHICO</h1>
-                    <p class="brand-tagline">Join thousands of satisfied customers</p>
-                </div>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <div class="feature-icon">🎯</div>
-                        <div class="feature-text">
-                            <h3>Easy Ordering</h3>
-                            <p>Order your favorite food in just a few clicks</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">💳</div>
-                        <div class="feature-text">
-                            <h3>Secure Payments</h3>
-                            <p>Multiple payment options with secure checkout</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🎁</div>
-                        <div class="feature-text">
-                            <h3>Exclusive Deals</h3>
-                            <p>Get access to special offers and discounts</p>
-                        </div>
-                    </div>
-                </div>
+    <?php include 'includes/reusedComponents/backButton.php' ?>    
+<div class="auth-container">
+        <div class="auth-left">
+            <div class="brand-section">
+                <h1 class="brand-logo">MUNCHICO</h1>
+                <p class="brand-tagline">Join thousands of food lovers</p>
             </div>
-
-            <div class="auth-right">
-                <div class="auth-form-wrapper">
-                    <div class="auth-header">
-                        <h2>Create Account</h2>
-                        <p>Sign up to start ordering delicious food</p>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">🎁</div>
+                    <div class="feature-text">
+                        <h3>Welcome Bonus</h3>
+                        <p>Get 20% off on your first order</p>
                     </div>
-
-                    <form class="auth-form" action="register.php" method="POST" onsubmit="return validateForm()">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="fullname">Full Name</label>
-                                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" required />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required />
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input
-                                    type="password"
-                                    id="password"
-                                    name="password"
-                                    placeholder="Min. 8 characters"
-                                    minlength="8"
-                                    required
-                                />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input
-                                    type="password"
-                                    id="confirmPassword"
-                                    name="confirmPassword"
-                                    placeholder="Repeat password"
-                                    required
-                                />
-                            </div>
-                        </div>
-
-                        <div class="terms-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="terms" id="terms" required />
-                                <span
-                                    >I agree to the <a href="#" class="terms-link">Terms & Conditions</a> and
-                                    <a href="#" class="terms-link">Privacy Policy</a></span
-                                >
-                            </label>
-                        </div>
-
-                        <button type="submit" class="auth-btn">Create Account</button>
-                    </form>
-
-                    <div class="auth-footer">
-                        <p>Already have an account? <a href="login.php">Login here</a></p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💳</div>
+                    <div class="feature-text">
+                        <h3>Easy Payments</h3>
+                        <p>Multiple payment options available</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔔</div>
+                    <div class="feature-text">
+                        <h3>Order Tracking</h3>
+                        <p>Track your order in real-time</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="auth-right">
+            <div class="auth-form-wrapper">
+                <div class="auth-header">
+                    <h2>Create Account</h2>
+                    <p>Sign up to start ordering delicious food</p>
+                </div>
+
+                <?php if(isset($_SESSION['error'])): ?>
+                    <div class="alert alert-error">
+                        <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+                    </div>
+                <?php endif; ?>
+
+                <form class="auth-form" method="POST" action="register_process.php">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="John" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="Doe" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="At least 8 characters" required minlength="8" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" placeholder="Enter your complete address" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="e.g., Karachi" />
+                        </div>
+                        <div class="form-group">
+                            <label for="postal_code">Postal Code</label>
+                            <input type="text" id="postal_code" name="postal_code" placeholder="e.g., 75500" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required />
+                            <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Create Account</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.php">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <script>
             function validateForm() {
@@ -349,6 +360,55 @@
             .terms-link:hover {
                 text-decoration: underline;
             }
+            /* Add this CSS to your existing styles in the register.php file */
+
+.form-group textarea {
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: #fafafa;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8b4513;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(139, 69, 19, 0.1);
+}
+
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+/* Optional: Limit max height for textarea */
+.form-group textarea {
+    max-height: 200px;
+}
+
+/* Scrollbar styling for textarea (optional) */
+.form-group textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-group textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.form-group textarea::-webkit-scrollbar-thumb {
+    background: #8b4513;
+    border-radius: 10px;
+}
+
+.form-group textarea::-webkit-scrollbar-thumb:hover {
+    background: #6d3410;
+}
 
             .auth-btn {
                 margin-top: 1rem;

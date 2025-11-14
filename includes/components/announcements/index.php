@@ -1,4 +1,4 @@
-<section class="announcement">
+<section class="announcement rc-reveal-down rc-ease-in rc-speed-normal">
     <div class="section">
         <div class="announcement-marquee">
             <div class="marquee-content">
@@ -133,36 +133,6 @@
     </div>
 </section>
 
-
-<style>
-.announcement{padding:var(--space-sm) 0;background-color:rgba(245,245,245,0.95);color:var(--text-color,#333);overflow:hidden;position:relative}
-.announcement .container{max-width:var(--container-width);margin:0 auto;padding:0 var(--space-xl)}
-.announcement-marquee{display:flex;overflow:hidden;white-space:nowrap;position:relative;border-radius:var(--radius-xl);background:linear-gradient(135deg,rgba(255,255,255,0.9) 0%,rgba(240,240,240,0.9) 100%);padding:var(--space-sm) var(--space-md);box-shadow:0 4px 10px rgba(0,0,0,0.05)}
-.marquee-content{display:flex;align-items:center;animation:marquee 20s linear infinite;flex-shrink:0;gap:var(--space-xl);color:#333}
-.announcement-item{padding:var(--space-xs) var(--space-sm);border-radius:var(--radius-sm);transition:background-color var(--transition-fast);display:inline-flex;align-items:center;gap:var(--space-xs)}
-.announcement-item:hover{background-color:rgba(0,0,0,0.05)}
-.announcement-separator{width:1px;height:16px;background-color:rgba(0,0,0,0.15);opacity:0.5}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-.announcement:hover .marquee-content{animation-play-state:paused}
-main{overflow-x:hidden}
-@media (max-width:1024px){
-.announcement .container{padding:0 var(--space-lg)}
-.marquee-content{animation-duration:15s;gap:var(--space-lg)}
-}
-@media (max-width:768px){
-.announcement .container{padding:0 var(--space-md)}
-.announcement-marquee{border-radius:var(--radius-lg);padding:var(--space-xs) var(--space-md)}
-.marquee-content{animation-duration:12s;gap:var(--space-md)}
-.announcement-item{font-size:0.9rem}
-}
-@media (max-width:480px){
-.announcement .container{padding:0 var(--space-sm)}
-.announcement-marquee{border-radius:var(--radius-md)}
-.marquee-content{animation-duration:10s;gap:var(--space-sm)}
-.announcement-item{font-size:0.8rem;padding:var(--space-xs)}
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded',function(){const bar=document.querySelector('.announcement');console.log('Marquee announcement bar loaded successfully')});
-</script>
+<!-- HTML AND CSS -->
+<link rel="stylesheet" href="includes/components/announcements/css/styles.css">
+<script src="includes/components/announcements/js/script.js"></script>

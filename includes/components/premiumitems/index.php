@@ -1,7 +1,7 @@
 <section class="rc-both rc-ease-in rc-delay-rc-delay-150  munchico-premium-items py-xl" aria-labelledby="munchico-premium-items-title-1">
     <div class="container">
         <!-- Banner with 50% OFF -->
-        <div class="munchico-premium-banner mb-xl">
+        <div class="munchico-premium-banner mb-xl rc-zoom-in-up">
             <span class="munchico-discount-badge">50% OFF</span>
             <h1 class="munchico-banner-title">New Pine Nuts Chilghoza</h1>
             <p class="munchico-banner-subtitle">50% Discount</p>
@@ -10,7 +10,7 @@
         <!-- 4-Column Grid Layout -->
         <div class="grid grid-4 gap-lg mb-2xl">
             <!-- Product Card 1 -->
-            <div class="munchico-product-card">
+            <div class="munchico-product-card rc-zoom-in-up ">
                 <div class="munchico-product-image-wrapper">
                     <img src="assets/img/product.webp" alt="Organic Pine Nuts Chilgoza" class="munchico-product-image">
                     <span class="munchico-quality-badge">HIGH QUALITY</span>
@@ -30,7 +30,7 @@
             </div>
 
             <!-- Product Card 2 -->
-            <div class="munchico-product-card">
+            <div class="munchico-product-card rc-zoom-in-up">
                 <div class="munchico-product-image-wrapper">
                     <img src="assets/img/product.webp" alt="Dried Hazelnuts" class="munchico-product-image">
                     <span class="munchico-quality-badge">HIGH QUALITY</span>
@@ -49,7 +49,7 @@
             </div>
 
             <!-- Product Card 3 -->
-            <div class="munchico-product-card">
+            <div class="munchico-product-card rc-zoom-in-up">
                 <div class="munchico-product-image-wrapper">
                     <img src="assets/img/product.webp" alt="Chilgoza Magaz" class="munchico-product-image">
                     <span class="munchico-quality-badge">HIGH QUALITY</span>
@@ -69,7 +69,7 @@
             </div>
 
             <!-- Product Card 4 -->
-            <div class="munchico-product-card">
+            <div class="munchico-product-card rc-zoom-in-up">
                 <div class="munchico-product-image-wrapper">
                     <img src="assets/img/product.webp" alt="Chilgoza pine nuts 250gm" class="munchico-product-image">
                     <span class="munchico-quality-badge">HIGH QUALITY</span>
@@ -92,7 +92,7 @@
         <!-- 2-Column Grid Layout -->
         <div class="grid grid-2 gap-xl">
             <!-- Featured Category 1 -->
-            <div class=" munchico-featured-category">
+            <div class=" munchico-featured-category rc-zoom-in-up">
                 <div class="munchico-featured-content">
                     <h2 class="munchico-featured-title">ORGANIC FOOD SPICES</h2>
                     <p class="munchico-featured-subtitle">Add Spice to Your Life!</p>
@@ -117,7 +117,7 @@
             </div>
 
             <!-- Featured Category 2 -->
-            <div class="munchico-featured-category">
+            <div class="munchico-featured-category rc-zoom-in-up">
                 <div class="munchico-featured-content">
                     <h2 class="munchico-featured-title">PREMIUM SEEDS</h2>
                     <p class="munchico-featured-subtitle">Crunch into goodness with every seed!</p>
@@ -148,7 +148,7 @@
             </div>
 
             <!-- Featured Category 3 -->
-            <div class="munchico-featured-category">
+            <div class="munchico-featured-category rc-zoom-in-up">
                 <div class="munchico-featured-content">
                     <h2 class="munchico-featured-title">PREMIUM DATES</h2>
                     <p class="munchico-featured-subtitle">Nature's Sweetest Energy Boost!</p>
@@ -173,7 +173,7 @@
                 </svg>            </div>
 
             <!-- Featured Category 4 -->
-            <div class="munchico-featured-category">
+            <div class="munchico-featured-category rc-zoom-in-up">
                 <div class="munchico-featured-content">
                     <h2 class="munchico-featured-title">PREMIUM SNACKS</h2>
                     <p class="munchico-featured-subtitle">Snack smarter, crunch harder!</p>
@@ -197,13 +197,13 @@
 
 <style>
 .munchico-premium-items{background:var(--gray-50)}
-.munchico-premium-banner{background:linear-gradient(135deg,#7CB342 0%,#558B2F 100%);border-radius:var(--radius-xl);padding:var(--space-3xl) var(--space-xl);text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+.munchico-premium-banner{background:var(--primary-color);border-radius:var(--radius-xl);padding:var(--space-3xl) var(--space-xl);text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
 .munchico-discount-badge{display:inline-block;background:var(--white);color:var(--primary-dark);padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-full);font-weight:bold;font-size:var(--font-size-sm);margin-bottom:var(--space-md);box-shadow:var(--shadow-md)}
 .munchico-banner-title{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:var(--white);margin-bottom:var(--space-sm);text-shadow:2px 2px 4px rgba(0,0,0,0.2);letter-spacing:1px}
 .munchico-banner-subtitle{font-size:var(--font-size-2xl);font-weight:700;color:var(--white);text-shadow:1px 1px 2px rgba(0,0,0,0.1)}
-.munchico-product-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);transition:transform var(--transition-base),box-shadow var(--transition-base);position:relative}
-.munchico-product-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl)}
-.munchico-product-image-wrapper{position:relative;background:linear-gradient(135deg,#2C5F2D 0%,#1B3A1C 100%);padding:var(--space-xl);display:flex;align-items:center;justify-content:center;min-height:280px}
+.munchico-product-card rc-zoom-in-up{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);transition:transform var(--transition-base),box-shadow var(--transition-base);position:relative}
+.munchico-product-card rc-zoom-in-up:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl)}
+.munchico-product-image-wrapper{position:relative;background:var(--primary-color);padding:var(--space-xl);display:flex;align-items:center;justify-content:center;min-height:280px}
 .munchico-product-image{width:100%;max-width:200px;height:auto;border-radius:50%;border:4px solid var(--white);box-shadow:var(--shadow-lg);object-fit:cover}
 .munchico-quality-badge{position:absolute;top:var(--space-md);right:var(--space-md);background:var(--accent-color);color:var(--white);padding:var(--space-xs) var(--space-md);border-radius:var(--radius-md);font-size:var(--font-size-xs);font-weight:700;display:flex;align-items:center;gap:var(--space-xs);box-shadow:var(--shadow-sm)}
 .munchico-quality-badge::before{content:"⭐⭐⭐";font-size:0.7rem}
@@ -213,8 +213,8 @@
 .munchico-product-pricing{display:flex;align-items:center;gap:var(--space-sm);margin-bottom:var(--space-lg)}
 .munchico-price-old{font-size:var(--font-size-sm);color:var(--gray-500);text-decoration:line-through}
 .munchico-price-current{font-size:var(--font-size-xl);font-weight:700;color:var(--primary-color)}
-.munchico-btn-add-cart{width:100%;background:linear-gradient(135deg,#7CB342,#558B2F);color:var(--white);border:none;padding:var(--space-md);border-radius:var(--radius-md);font-weight:700;font-size:var(--font-size-sm);cursor:pointer;transition:all var(--transition-base);box-shadow:var(--shadow-sm);text-transform:uppercase;letter-spacing:0.5px}
-.munchico-btn-add-cart:hover{background:linear-gradient(135deg,#558B2F,#33691E);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.munchico-btn-add-cart{width:100%;background:var(--primary-color);color:var(--white);border:none;padding:var(--space-md);border-radius:var(--radius-md);font-weight:700;font-size:var(--font-size-sm);cursor:pointer;transition:all var(--transition-base);box-shadow:var(--shadow-sm);text-transform:uppercase;letter-spacing:0.5px}
+.munchico-btn-add-cart:hover{background:var(--primary-light);box-shadow:var(--shadow-md);transform:translateY(-2px)}
 .munchico-btn-more{width:100%;background:transparent;color:var(--gray-600);border:1px solid var(--gray-300);padding:var(--space-sm);border-radius:var(--radius-md);cursor:pointer;transition:all var(--transition-base);font-weight:500}
 .munchico-btn-more:hover{background:var(--gray-100);color:var(--primary-color);border-color:var(--primary-light)}
 .munchico-featured-category{background:var(--white);border-radius:var(--radius-xl);padding:var(--space-2xl);position:relative;overflow:hidden;box-shadow:var(--shadow-lg);transition:transform var(--transition-base)}

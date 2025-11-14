@@ -7,7 +7,7 @@
   <div class="container">
     
     <!-- Top Section - Brand & Newsletter -->
-    <div class="footer-top">
+    <div class="footer-top rc-zoom-in-up">
       <div class="footer-brand">
         <img src="assets/img/logo.png" alt="MUNCHICO Logo" class="footer-logo">
         <p class="footer-tagline">Premium Dried Fruits & Nuts for a Healthier You</p>
@@ -52,7 +52,7 @@
     </div>
 
     <!-- Middle Section - Links -->
-    <div class="footer-middle">
+    <div class="footer-middle rc-zoom-in-up">
       <div class="footer-column">
         <h4 class="column-title">Shop</h4>
         <ul class="footer-links">
@@ -65,7 +65,7 @@
         </ul>
       </div>
 
-      <div class="footer-column">
+      <div class="footer-column rc-zoom-in-up">
         <h4 class="column-title">Company</h4>
         <ul class="footer-links">
           <li><a href="#">About Us</a></li>
@@ -77,7 +77,7 @@
         </ul>
       </div>
 
-      <div class="footer-column">
+      <div class="footer-column rc-zoom-in-up">
         <h4 class="column-title">Support</h4>
         <ul class="footer-links">
           <li><a href="#">Contact Us</a></li>
@@ -89,7 +89,7 @@
         </ul>
       </div>
 
-      <div class="footer-column">
+      <div class="footer-column rc-zoom-in-up">
         <h4 class="column-title">Contact</h4>
         <ul class="footer-contact">
           <li>
@@ -117,7 +117,7 @@
     </div>
 
     <!-- Bottom Section - Copyright & Payment -->
-    <div class="footer-bottom">
+    <div class="footer-bottom rc-zoom-in-up">
       <div class="footer-copyright">
         <p>&copy; 2024 MUNCHICO. All rights reserved.</p>
         <div class="footer-legal">
@@ -129,7 +129,7 @@
         </div>
       </div>
       
-      <div class="footer-payments">
+      <div class="footer-payments rc-zoom-in-up">
         <span class="payment-text">We Accept:</span>
         <div class="payment-methods">
           <span class="payment-icon">💳</span>

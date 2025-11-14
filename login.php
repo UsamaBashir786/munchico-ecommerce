@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,7 +10,6 @@
         <link rel="stylesheet" href="assets/css/main.css" />
     </head>
     <body>
-        <a href="index.html" class="back-home-btn">← Back to Home</a>
         <style>
             .back-home-btn {
                 /* display: inline-flex; */
@@ -27,7 +29,8 @@
                 transform: translateX(-3px);
             }
         </style>
-        <div class="auth-container">
+            <?php include 'includes/reusedComponents/backButton.php' ?>
+            <div class="auth-container">
             <div class="auth-left">
                 <div class="brand-section">
                     <h1 class="brand-logo">MUNCHICO</h1>
@@ -65,7 +68,19 @@
                         <p>Login to your account to continue</p>
                     </div>
 
-                    <form class="auth-form" action="login.php" method="POST">
+                    <?php if(isset($_SESSION['error'])): ?>
+                        <div class="alert alert-error">
+                            <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if(isset($_SESSION['success'])): ?>
+                        <div class="alert alert-success">
+                            <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <form class="auth-form" action="login_process.php" method="POST">
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" placeholder="Enter your email" required />
@@ -99,6 +114,7 @@
                 </div>
             </div>
         </div>
+
 
         <style>
             * {

@@ -9,6 +9,7 @@
         .hero-swiper {
             width: 100%;
             border-radius: var(--radius-xl);
+
             overflow: hidden;
             box-shadow: var(--shadow-xxl);
         }
@@ -17,6 +18,7 @@
             position: relative;
             height: 500px;
             display: flex;
+            cursor: pointer;
             align-items: center;
             justify-content: center;
         }
@@ -236,7 +238,7 @@
         }
     </style>
 
-    <section class="banner-section" aria-label="Promotional Banner">
+    <section class="banner-section rc-zoom-in-up" aria-label="Promotional Banner">
         <div class="container">
             <div class="swiper hero-swiper">
                 <div class="swiper-wrapper">
@@ -255,7 +257,7 @@
 
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1577003833154-a7e3ab0e8320?w=1400" alt="Fresh Dates" class="banner-image">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=1400" alt="Fresh Dates" class="banner-image">
                         <div class="banner-overlay"></div>
                         <div class="banner-content">
                             <div class="banner-subtitle">Limited Time Offer</div>
@@ -267,7 +269,7 @@
 
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784010?w=1400" alt="Golden Raisins" class="banner-image">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=1400" alt="Golden Raisins" class="banner-image">
                         <div class="banner-overlay"></div>
                         <div class="banner-content">
                             <div class="banner-subtitle">New Arrival</div>
@@ -279,7 +281,7 @@
 
                     <!-- Slide 4 -->
                     <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=1400" alt="Organic Figs" class="banner-image">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=1400" alt="Organic Figs" class="banner-image">
                         <div class="banner-overlay"></div>
                         <div class="banner-content">
                             <div class="banner-subtitle">Health & Wellness</div>
@@ -300,6 +302,8 @@
             </div>
         </div>
     </section>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
     <script>

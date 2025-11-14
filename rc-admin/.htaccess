@@ -1,0 +1,11 @@
+Place this in your /admin directory
+*/
+
+# Prevent directory browsing
+Options -Indexes
+
+# Protect config files
+<FilesMatch "^(database\.php|config\.php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

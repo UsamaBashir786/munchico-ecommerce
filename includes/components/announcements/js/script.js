@@ -1,5 +1,1 @@
-// Marquee announcement bar functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const announcementBar = document.querySelector('.announcement');
-  console.log('Marquee announcement bar loaded successfully');
-});
+document.addEventListener('DOMContentLoaded',function(){const bar=document.querySelector('.announcement');console.log('Marquee announcement bar loaded successfully')});

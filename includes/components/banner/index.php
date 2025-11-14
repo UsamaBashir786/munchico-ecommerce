@@ -1,4 +1,4 @@
-<section class="banner-section rc-both rc-ease-in rc-delay-rc-delay-150" aria-label="Promotional Banner">
+<section class="banner-section rc-zoom-in-up" aria-label="Promotional Banner">
     <div class="container">
         <div class="promotional-banner"></div>
         <div class="text-center mt-xl">

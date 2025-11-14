@@ -316,3 +316,57 @@ header a {
 
 
 
+
+
+/* ===========================
+Extra CSS
+============================== */
+/* Products Container */
+.products-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+  position: relative;
+}
+
+/* Products Header */
+.products-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  padding: var(--space-2xl) var(--space-lg);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.products-header h1 {
+  color: var(--white);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.products-header p {
+  color: var(--primary-light);
+  font-size: var(--font-size-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .products-header {
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  .products-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .products-header p {
+    font-size: var(--font-size-base);
+  }
+  
+  .products-container {
+    padding: 0 var(--space-md);
+  }
+}

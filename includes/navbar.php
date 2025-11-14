@@ -1,6 +1,16 @@
+<?php
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Check if user is logged in
+$isLoggedIn = isset($_SESSION['user_id']) || isset($_SESSION['logged_in']);
+?>
+
 <header class="top-bar flex-between px-xl py-md">
   <!--=========Number Side=========== -->
-  <div class="flex align-items-center gap-sm helpline-section">
+  <div class="flex align-items-center gap-sm helpline-section rc-zoom-in-up">
     <div class="helpline-icon-wrapper">
       <img src="assets/royal-icons/helpline-icon.png" alt="Helpline Icon">
       <span class="pulse-ring"></span>
@@ -12,8 +22,8 @@
   </div>
   
   <!--=========Icon Side=========== -->
-  <div class="gap-xl flex header-icons">
-    <span class="icons-span position-relative cart-icon" title="Shopping Cart">
+  <div class="gap-xl flex header-icons rc-zoom-in-up">
+    <span class="icons-span position-relative cart-icon" onclick="window.location.href='cart.php'" title="Shopping Cart">
       <span class="badge bounce-in">0</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
         <circle cx="9" cy="21" r="1"></circle>
@@ -32,18 +42,18 @@
 
 <!-- Main Navigation: Logo, menu, search, cart -->
 <nav class="navbar px-xl rc-both" aria-label="Primary Navigation">
-  <div class="logo rc-zoom-in-sm rc-delay-150" onclick="window.location.href='index.html'">
+  <div class="logo rc-zoom-in-sm rc-delay-150" onclick="window.location.href='index.php'">
     <img class="cursor-pointer logo-image" width="120px" src="assets/img/logo.png" alt="Logo">
   </div>
   
-  <ul class="nav-links rc-distance-sm rc-delay-200">
-    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">New Arrivals</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">All Products</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Collection</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Track Order</a></li>
+  <ul class="nav-links">
+    <li class="nav-item"><a href="index.php" class="nav-link rc-zoom-in-up">Home</a></li>
+    <li class="nav-item"><a href="product.php" class="nav-link rc-zoom-in-up">Shop</a></li>
+    <li class="nav-item"><a href="product.php" class="nav-link rc-zoom-in-up">New Arrivals</a></li>
+    <li class="nav-item"><a href="product.php" class="nav-link rc-zoom-in-up">All Products</a></li>
+    <li class="nav-item"><a href="product.php" class="nav-link rc-zoom-in-up">Collection</a></li>
+    <li class="nav-item"><a href="login.php" class="nav-link rc-zoom-in-up">Account</a></li>
+    <li class="nav-item"><a href="#" class="nav-link rc-zoom-in-up">Track Order</a></li>
   </ul>
   
   <div class="search-bar rc-distance-sm rc-delay-250">
@@ -60,7 +70,20 @@
         <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </button>
-    <a href="#" class="login-button btn btn-primary">Login</a>
-    <a href="#" class="register-button btn btn-outline">Register</a>
+    
+    <?php if ($isLoggedIn): ?>
+      <!-- Show Logout button with left arrow when logged in -->
+      <a href="logout.php" class="" style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Logout
+      </a>
+    <?php else: ?>
+      <!-- Show Login and Register buttons when not logged in -->
+      <a href="login.php" class="login-button btn btn-primary">Login</a>
+      <a href="register.php" class="register-button btn btn-outline">Register</a>
+    <?php endif; ?>
   </div>
 </nav>
