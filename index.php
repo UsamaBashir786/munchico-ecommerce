@@ -190,7 +190,7 @@ session_start();
       <!-- 💎 PREMIUM ITEMS -->
       <!-- Highlights premium or featured products -->
       <!-- ========================================================= -->
-      <?php include 'includes/components/premiumitems/index.php' ?>
+      <!-- include 'includes/components/premiumitems/index.php' -->
         
       <!-- ========================================================= -->
       <!-- 🪧 BANNER SECTION -->
@@ -202,7 +202,7 @@ session_start();
       <!-- 🛍️ FEATURED PRODUCTS -->
       <!-- Displays top-rated or trending items -->
       <!-- ========================================================= -->
-      <?php include 'includes/components/featureproducts/index.php' ?>
+      <!-- include 'includes/components/featureproducts/index.php' -->
           
       <!-- ========================================================= -->
       <!-- 🌰 DRIED FIGS SECTION -->

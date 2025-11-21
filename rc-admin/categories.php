@@ -1097,6 +1097,11 @@ textarea[readonly] {
                                 <td><input type="checkbox" class="row-checkbox" value="<?php echo $category['id']; ?>"></td>
                                 <td>
                                     <div class="category-info">
+                                        <?php if (!empty($category['icon_class'])): ?>
+                                            <i class="<?php echo safeText($category['icon_class']); ?>"></i>
+                                        <?php else: ?>
+                                            <i class="fas fa-folder"></i> <!-- Default icon -->
+                                        <?php endif; ?>
                                         <span><?php echo safeText($category['category_name']); ?></span>
                                     </div>
                                 </td>

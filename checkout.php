@@ -974,4 +974,4 @@ foreach ($cart as $item) {
     });
   </script>
 </body>
-</html>
+</html>`
