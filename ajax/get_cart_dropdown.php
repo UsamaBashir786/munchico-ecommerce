@@ -32,6 +32,17 @@ try {
     $stmt->execute([$_SESSION['user_id']]);
     $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    // Fix image paths for frontend display
+    foreach ($items as &$item) {
+        if (!empty($item['main_image'])) {
+            // Convert database path to frontend accessible path
+            $filename = basename($item['main_image']);
+            $item['main_image'] = '../rc-admin/uploads/products/' . $filename;
+        } else {
+            $item['main_image'] = '../assets/images/placeholder-product.jpg';
+        }
+    }
+
     // Get total count and amount
     $stmt = $pdo->prepare("
         SELECT SUM(quantity) as total_count, SUM(total_price) as total_amount 

@@ -10,6 +10,10 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 try {
+    // Create database connection
+    $database = new Database();
+    $pdo = $database->getConnection();
+
     $stmt = $pdo->prepare("
         SELECT SUM(quantity) as item_count, SUM(total_price) as subtotal 
         FROM cart 

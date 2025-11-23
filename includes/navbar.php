@@ -470,6 +470,37 @@ if ($isLoggedIn && isset($_SESSION['user_id'])) {
   .dropdown-item svg {
     color: var(--black);
   }
+  .dropdown-item-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #f5f5f5;
+    border: 1px solid #e5e7eb;
+}
+
+/* Ensure images don't stretch or distort */
+.dropdown-item-image {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Loading state for images */
+.dropdown-item-image:not([src]) {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
 </style>
 
 <script>
@@ -576,23 +607,55 @@ if ($isLoggedIn && isset($_SESSION['user_id'])) {
 
       if (data.success) {
         if (data.items && data.items.length > 0) {
-          container.innerHTML = data.items.map(item => `
-                    <div class="dropdown-item" data-cart-id="${item.cart_id}">
-                        <img src="${item.main_image}" alt="${item.product_name}" class="dropdown-item-image">
-                        <div class="dropdown-item-details">
-                            <h4 class="dropdown-item-name">${item.product_name}</h4>
-                            <div class="dropdown-item-price">Rs. ${parseFloat(item.price).toFixed(2)}</div>
-                            <div class="dropdown-item-quantity">Qty: ${item.quantity}</div>
-                        </div>
-                        <div class="dropdown-item-actions">
-                            <button class="dropdown-item-action remove" onclick="removeFromCart(${item.cart_id})" title="Remove">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                `).join('');
+       // In loadCartDropdown function, update the image HTML:
+container.innerHTML = data.items.map(item => `
+    <div class="dropdown-item" data-cart-id="${item.cart_id}">
+        <img src="${item.main_image}" 
+             alt="${item.product_name}" 
+             class="dropdown-item-image"
+             onerror="this.src='../assets/images/placeholder-product.jpg'">
+        <div class="dropdown-item-details">
+            <h4 class="dropdown-item-name">${item.product_name}</h4>
+            <div class="dropdown-item-price">Rs. ${parseFloat(item.price).toFixed(2)}</div>
+            <div class="dropdown-item-quantity">Qty: ${item.quantity}</div>
+        </div>
+        <div class="dropdown-item-actions">
+            <button class="dropdown-item-action remove" onclick="removeFromCart(${item.cart_id})" title="Remove">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+`).join('');
+
+// In loadWishlistDropdown function, update the image HTML:
+container.innerHTML = data.items.map(item => `
+    <div class="dropdown-item" data-wishlist-id="${item.wishlist_id}">
+        <img src="${item.main_image}" 
+             alt="${item.product_name}" 
+             class="dropdown-item-image"
+             onerror="this.src='../assets/images/placeholder-product.jpg'">
+        <div class="dropdown-item-details">
+            <h4 class="dropdown-item-name">${item.product_name}</h4>
+            <div class="dropdown-item-price">Rs. ${parseFloat(item.price).toFixed(2)}</div>
+        </div>
+        <div class="dropdown-item-actions">
+            <button class="dropdown-item-action" onclick="addToCartFromWishlist(${item.product_id})" title="Add to Cart">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+            </button>
+            <button class="dropdown-item-action remove" onclick="removeFromWishlist(${item.wishlist_id})" title="Remove">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+`).join('');
 
           // Update total
           document.getElementById('cart-total-amount').textContent = `Rs. ${parseFloat(data.total).toFixed(2)}`;
@@ -626,19 +689,31 @@ if ($isLoggedIn && isset($_SESSION['user_id'])) {
 
   async function loadWishlistDropdown() {
     const container = document.getElementById('wishlist-dropdown-items');
-    if (!container) return;
+    if (!container) {
+        console.error('Wishlist dropdown container not found');
+        return;
+    }
 
     try {
-      container.innerHTML = '<div class="loading-spinner">Loading...</div>';
+        container.innerHTML = '<div class="loading-spinner">Loading...</div>';
 
-      const response = await fetch('ajax/get_wishlist_dropdown.php');
-      const data = await response.json();
+        const response = await fetch('ajax/get_wishlist_dropdown.php');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('Wishlist data:', data); // Debug log
 
-      if (data.success) {
-        if (data.items && data.items.length > 0) {
-          container.innerHTML = data.items.map(item => `
+        if (data.success) {
+            if (data.items && data.items.length > 0) {
+                container.innerHTML = data.items.map(item => `
                     <div class="dropdown-item" data-wishlist-id="${item.wishlist_id}">
-                        <img src="${item.main_image}" alt="${item.product_name}" class="dropdown-item-image">
+                        <img src="${item.main_image}" 
+                             alt="${item.product_name}" 
+                             class="dropdown-item-image"
+                             onerror="this.src='../assets/images/placeholder-product.jpg'">
                         <div class="dropdown-item-details">
                             <h4 class="dropdown-item-name">${item.product_name}</h4>
                             <div class="dropdown-item-price">Rs. ${parseFloat(item.price).toFixed(2)}</div>
@@ -660,10 +735,13 @@ if ($isLoggedIn && isset($_SESSION['user_id'])) {
                     </div>
                 `).join('');
 
-          // Update count in header
-          document.querySelector('.dropdown-header .wishlist-count').textContent = `${data.total_count} item(s)`;
-        } else {
-          container.innerHTML = `
+                // Update count in header
+                const wishlistCountElement = document.querySelector('.dropdown-header .wishlist-count');
+                if (wishlistCountElement) {
+                    wishlistCountElement.textContent = `${data.total_count} item(s)`;
+                }
+            } else {
+                container.innerHTML = `
                     <div class="empty-state">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -671,19 +749,90 @@ if ($isLoggedIn && isset($_SESSION['user_id'])) {
                         <p>Your wishlist is empty</p>
                     </div>
                 `;
-          document.querySelector('.dropdown-header .wishlist-count').textContent = '0 item(s)';
-        }
+                
+                const wishlistCountElement = document.querySelector('.dropdown-header .wishlist-count');
+                if (wishlistCountElement) {
+                    wishlistCountElement.textContent = '0 item(s)';
+                }
+            }
 
-        // Update badge
-        updateWishlistBadge(data.total_count || 0);
-      } else {
-        throw new Error(data.message || 'Failed to load wishlist');
-      }
+            // Update badge
+            updateWishlistBadge(data.total_count || 0);
+        } else {
+            throw new Error(data.message || 'Failed to load wishlist');
+        }
     } catch (error) {
-      console.error('Error loading wishlist dropdown:', error);
-      container.innerHTML = '<div class="empty-state"><p>Error loading wishlist</p></div>';
+        console.error('Error loading wishlist dropdown:', error);
+        container.innerHTML = '<div class="empty-state"><p>Error loading wishlist</p></div>';
     }
-  }
+}
+
+function updateWishlistBadge(count) {
+    const badge = document.querySelector('.wishlist-badge');
+    if (badge) {
+        badge.textContent = count;
+        badge.classList.add('update');
+        setTimeout(() => badge.classList.remove('update'), 300);
+    }
+}
+
+async function removeFromWishlist(wishlistId) {
+    try {
+        const response = await fetch('ajax/remove_from_wishlist.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                wishlist_id: wishlistId
+            })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            // Reload wishlist dropdown
+            loadWishlistDropdown();
+            // Show notification
+            showNotification('Item removed from wishlist');
+        } else {
+            throw new Error(result.message || 'Failed to remove item');
+        }
+    } catch (error) {
+        console.error('Error removing from wishlist:', error);
+        showNotification('Error removing item from wishlist', 'error');
+    }
+}
+
+async function addToCartFromWishlist(productId) {
+    try {
+        const response = await fetch('ajax/add_to_cart.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                product_id: productId,
+                quantity: 1
+            })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            // Reload both dropdowns
+            loadCartDropdown();
+            loadWishlistDropdown();
+            // Show notification
+            showNotification('Item added to cart');
+        } else {
+            throw new Error(result.message || 'Failed to add item to cart');
+        }
+    } catch (error) {
+        console.error('Error adding to cart:', error);
+        showNotification('Error adding item to cart', 'error');
+    }
+}
 
   function updateCartBadge(count) {
     const badge = document.querySelector('.cart-badge');

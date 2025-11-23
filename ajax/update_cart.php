@@ -19,6 +19,10 @@ if (!$cart_id || !$quantity) {
 }
 
 try {
+    // Create database connection
+    $database = new Database();
+    $pdo = $database->getConnection();
+
     // Get current price
     $stmt = $pdo->prepare("SELECT price FROM cart WHERE id = ? AND user_id = ?");
     $stmt->execute([$cart_id, $_SESSION['user_id']]);

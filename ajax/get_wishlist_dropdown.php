@@ -31,8 +31,17 @@ try {
     $stmt->execute([$_SESSION['user_id']]);
     $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // Add calculated price to each item
+    // Fix image paths and add calculated price
     foreach ($items as &$item) {
+        if (!empty($item['main_image'])) {
+            // Convert database path to frontend accessible path
+            $filename = basename($item['main_image']);
+            $item['main_image'] = '../rc-admin/uploads/products/' . $filename;
+        } else {
+            $item['main_image'] = '../assets/images/placeholder-product.jpg';
+        }
+        
+        // Add calculated price
         $item['price'] = $item['sale_price'] ?: $item['regular_price'];
     }
 
